@@ -1,0 +1,15 @@
+module ripplecarryadder_tb();
+reg [3:0]A,B;
+reg C;
+wire [3:0]sum;
+wire carry;
+ripplecarry dut(.A(A),.B(B),.C(C),.sum(sum),.carry(carry));
+
+initial 
+begin
+A=4'b0010;
+B=4'b1110;
+C=1;
+#10;
+end
+endmodule
